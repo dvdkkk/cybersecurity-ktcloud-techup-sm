@@ -164,9 +164,9 @@ export const EmploymentSupport: React.FC = () => {
         <Reveal delay={600} className="mt-16 text-center">
             <div className="inline-block p-[1px] rounded-full bg-gradient-to-r from-zinc-800 via-red-900 to-zinc-800">
                 <div className="bg-black rounded-full px-6 py-3 flex items-center gap-3">
-                    <span className="text-zinc-400 text-xs md:text-sm font-medium">이 모든 혜택을 전액 무료로 누리세요</span>
+                    <span className="text-zinc-400 text-xs md:text-sm font-medium">이 모든 혜택을 국비지원을 통해 누리세요</span>
                     <span className="w-1 h-1 rounded-full bg-zinc-600"></span>
-                    <span className="text-white text-xs md:text-sm font-bold">국비지원 100% 무료교육</span>
+                    <span className="text-white text-xs md:text-sm font-bold">95~100% 국비지원 교육</span>
                 </div>
             </div>
         </Reveal>

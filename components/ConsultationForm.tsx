@@ -101,7 +101,7 @@ export const ConsultationForm: React.FC = () => {
   };
 
   return (
-    <section id="consultation" className="py-8 bg-red-700 text-white scroll-mt-24">
+    <section id="consultation" className="py-8 bg-yellow-400 text-zinc-900 scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
@@ -113,14 +113,14 @@ export const ConsultationForm: React.FC = () => {
                 보안 전문가가 <br/>
                 친절하게 안내해드립니다.
               </h2>
-              <p className="text-lg font-medium text-white/80 mb-6">
+              <p className="text-lg font-medium text-zinc-800 mb-6">
                 국비지원 자격 여부부터 취업 및 교육과정까지<br/>
-                <span className="border-b-2 border-white">무료로 상담해드립니다.</span>
+                <span className="border-b-2 border-black">무료로 상담해드립니다.</span>
               </p>
               
               <div className="space-y-3 pt-4">
                   <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 bg-black text-red-600 rounded-full flex items-center justify-center">
+                      <div className="w-10 h-10 bg-black text-yellow-400 rounded-full flex items-center justify-center">
                           <Phone size={20} />
                       </div>
                       <div>
@@ -129,12 +129,12 @@ export const ConsultationForm: React.FC = () => {
                       </div>
                   </div>
                   <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 bg-black text-red-600 rounded-full flex items-center justify-center">
+                      <div className="w-10 h-10 bg-black text-yellow-400 rounded-full flex items-center justify-center">
                           <MapPin size={20} />
                       </div>
                       <div>
-                          <p className="text-xs font-bold opacity-70">교육장소</p>
-                          <p className="text-lg font-bold">안산</p>
+                          <p className="text-xs font-bold opacity-70">교육방식</p>
+                          <p className="text-lg font-bold">100%온라인</p>
                       </div>
                   </div>
               </div>

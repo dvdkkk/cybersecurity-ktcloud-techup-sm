@@ -16,6 +16,9 @@ import { HanjikgyoBenefits } from './components/HanjikgyoBenefits';
 import { ContentProvider, useContent } from './contexts/ContentContext';
 import { AdminDashboard } from './components/AdminDashboard';
 import { AdminLogin } from './components/AdminLogin';
+import { InstructorSection } from './components/InstructorSection';
+import { LearningSpaceSection } from './components/LearningSpaceSection';
+import { VideoSection } from './components/VideoSection';
 
 function VisitorTracker() {
   const { addVisitorLog } = useContent();
@@ -108,9 +111,12 @@ function AppContent() {
         <VisionSection />
         <HanjikgyoBenefits />
         <CourseSection />
+        <InstructorSection />
         <EmploymentSupport />
         <EmploymentSection />
         <ReviewSection />
+        <LearningSpaceSection />
+        <VideoSection />
         <ConsultationForm />
       </main>
       <FloatingCTA />
