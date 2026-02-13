@@ -57,7 +57,7 @@ export const LearningSpaceSection: React.FC = () => {
   const marqueeList = [...spaceImages, ...spaceImages];
 
   return (
-    <section className="py-24 bg-black relative border-t border-zinc-900 overflow-hidden">
+    <section id="learning-space" className="py-24 bg-black relative border-t border-zinc-900 overflow-hidden">
       <div className="container mx-auto px-4 mb-16 relative z-10">
         <Reveal>
           <div className="text-center mb-16">

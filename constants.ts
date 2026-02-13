@@ -8,7 +8,7 @@ export const COURSES: Course[] = [
     title: 'kt cloud 사이버 보안',
     subTitle: '미래 IT 산업의 핵심 기술 마스터',
     description: '실전에서 바로 사용 가능한 대화형 챗봇 시스템과 인공지능 플랫폼을 구축하는 실무 교육 과정입니다. 한국직업능력교육원에서 AI챗봇 개발 전문가로 거듭나세요.',
-    duration: '6개월 과정(122일)',
+    duration: '7개월 과정',
     schedule: '매달 신규 개강 예정',
     classTime: '주5회(월~금) 09:00~17:40',
     capacity: '20명(오프라인)',

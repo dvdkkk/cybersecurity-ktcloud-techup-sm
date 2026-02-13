@@ -67,7 +67,7 @@ export const InstructorSection: React.FC = () => {
               {/* Profile Image Area */}
               <div className="md:w-2/5 relative min-h-[400px] md:min-h-full bg-zinc-800">
                 <img 
-                  src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=2940&auto=format&fit=crop" 
+                  src="https://postfiles.pstatic.net/MjAyNjAyMTNfMjYg/MDAxNzcwOTcwMDg4ODQw.KZ1Vlz6i1wBPZwH1AVCfuCvoN6VpbyEehyb03M73bpcg.JhENNjkiZbbk0hEMa9reVdKH_9X3STtNKiYqLJwMeMUg.PNG/techup_lecturer_security_taewoon.png?type=w966" 
                   alt="강태운 강사" 
                   className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-overlay grayscale hover:grayscale-0 transition-all duration-700"
                 />

@@ -22,10 +22,10 @@ export const Footer: React.FC = () => {
             <div className="md:text-right">
                 <p className="font-bold text-zinc-400 mb-2">고객센터</p>
                 <a 
-                  href="tel:18005027" 
+                  href="tel:18775280" 
                   className="text-2xl font-bold text-white hover:text-red-600 transition-colors md:pointer-events-none md:cursor-default md:hover:text-white inline-block"
                 >
-                  1800-5027
+                  1877-5280
                 </a>
             </div>
         </div>

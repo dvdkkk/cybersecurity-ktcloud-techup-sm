@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { SiteContent, VisitorLog } from '../types';
 import { COURSES, EMPLOYMENT_STATUS, PROCESS_STEPS } from '../constants';
@@ -9,7 +10,7 @@ const defaultContent: SiteContent = {
     highlight: "kt cloud 사이버 보안",
     description: "데이터와 서비스를 수호하는 보안 전문가 과정입니다.",
     stats: [
-      { label: '모집여부', value: '모집 중(6개월과정)' },
+      { label: '모집여부', value: '모집 중(7개월과정)' },
       { label: '교육시간', value: '월~금 09:00~18:00' },
       { label: '수강료', value: '96%~100% 국비지원' },
       { label: '수업형태', value: '100%온라인/실시간 비대면' },
@@ -139,9 +140,9 @@ interface ContentContextType {
 
 const ContentContext = createContext<ContentContextType | undefined>(undefined);
 
-// 버전을 v8로 올려서 로컬 스토리지를 강제 갱신함
-const STORAGE_KEY = 'site_content_v8';
-const LOG_KEY = 'visitor_logs_v8';
+// 버전을 v9로 올려서 로컬 스토리지를 강제 갱신함
+const STORAGE_KEY = 'site_content_v9';
+const LOG_KEY = 'visitor_logs_v9';
 
 export const ContentProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [content, setContent] = useState<SiteContent>(defaultContent);

@@ -38,8 +38,8 @@ export const Navigation: React.FC = () => {
     { name: '비전 & 혜택', href: '#vision' },
     { name: '과정소개', href: '#courses' },
     { name: '커리어지원', href: '#employment-support' },
-    { name: '취업현황', href: '#employment' },
     { name: '수강후기', href: '#reviews' },
+    { name: '학습환경', href: '#learning-space' },
     { name: '상담신청', href: '#consultation' },
   ];
 
@@ -71,7 +71,7 @@ export const Navigation: React.FC = () => {
             </a>
           ))}
           <a 
-            href="tel:18005027" 
+            href="tel:18775280" 
             onClick={(e) => {
               const isPc = window.innerWidth >= 1024;
               if (isPc) handleNavClick(e, '#consultation');
@@ -79,7 +79,7 @@ export const Navigation: React.FC = () => {
             className="flex items-center gap-2 bg-red-700 text-white px-5 py-2 rounded-full font-bold text-lg hover:bg-red-600 transition-transform hover:scale-105"
           >
             <PhoneCall size={20} />
-            1800-5027
+            1877-5280
           </a>
         </div>
 

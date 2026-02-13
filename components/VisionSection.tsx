@@ -227,7 +227,7 @@ export const VisionSection: React.FC = () => {
                    <Zap size={40} fill="currentColor" />
                 </div>
                 <h4 className="text-xs font-bold text-red-500 uppercase tracking-widest mb-2">Process</h4>
-                <p className="text-white font-black text-2xl mb-6">6개월 실무 완성</p>
+                <p className="text-white font-black text-2xl mb-6">7개월 실무 완성</p>
                  <ul className="text-sm text-zinc-300 space-y-3 text-left w-full pl-4 bg-red-900/10 py-4 rounded-xl border border-red-900/20">
                     <li className="flex items-center gap-2">
                         <Check size={14} className="text-red-500" />
