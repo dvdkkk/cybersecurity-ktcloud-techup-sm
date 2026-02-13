@@ -18,7 +18,6 @@ import { AdminDashboard } from './components/AdminDashboard';
 import { AdminLogin } from './components/AdminLogin';
 import { InstructorSection } from './components/InstructorSection';
 import { LearningSpaceSection } from './components/LearningSpaceSection';
-import { VideoSection } from './components/VideoSection';
 
 function VisitorTracker() {
   const { addVisitorLog } = useContent();
@@ -116,7 +115,6 @@ function AppContent() {
         <EmploymentSection />
         <ReviewSection />
         <LearningSpaceSection />
-        <VideoSection />
         <ConsultationForm />
       </main>
       <FloatingCTA />

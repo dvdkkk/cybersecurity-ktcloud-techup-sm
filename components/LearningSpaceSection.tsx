@@ -43,7 +43,6 @@ const Reveal: React.FC<RevealProps> = ({ children, className = "", delay = 0 }) 
 export const LearningSpaceSection: React.FC = () => {
   // Unsplash images representing modern office/education spaces
   const spaceImages = [
-    "https://postfiles.pstatic.net/MjAyNjAyMTNfNTIg/MDAxNzcwOTY4NDUxNjE5.591OWwUJSnBWA9DwlmaYSoDSYpAjriX0X57uKfwjdy4g.Jqib9AJzXW_lgPd-DoNFY5Gf3SzwgQm1w7YGZWaTHAQg.PNG/techup_learning_place_03.png?type=w966", 
     "https://postfiles.pstatic.net/MjAyNjAyMTNfMjU0/MDAxNzcwOTY4NDUxNjEy.idTgUzFyCw6gekvQ0fIu7aqboJ2zumTCLUCW4avDk2cg.cGgnisvE7kRqnTuFegSGwK8bziruVCtl7VENTU6UQjwg.PNG/techup_learning_place_02.png?type=w966", 
     "https://postfiles.pstatic.net/MjAyNjAyMTNfMjI5/MDAxNzcwOTY4NDUxNzkx.IqG1hBeHhq1Gmj93BI9JQykR5GXQVTGpIWRbXxl7Jmwg.KPXIzcd3cbVnZLawCsh78lccwLqMo0gwdWiz8_wYwT0g.PNG/5.png?type=w966", 
     "https://postfiles.pstatic.net/MjAyNjAyMTNfNDMg/MDAxNzcwOTY4NDUxNjE5.591OWwUJSnBWA9DwlmaYSoDSYpAjriX0X57uKfwjdy4g.Jqib9AJzXW_lgPd-DoNFY5Gf3SzwgQm1w7YGZWaTHAQg.PNG/techup_learning_place_03.png?type=w966", 

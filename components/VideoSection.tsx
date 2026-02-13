@@ -46,48 +46,49 @@ export const VideoSection: React.FC = () => {
   const videoId = "ysz5S6PUM-U"; 
 
   return (
-    <section className="py-24 bg-zinc-950 relative overflow-hidden border-t border-zinc-900">
-      <div className="container mx-auto px-4 relative z-10">
-        <Reveal>
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-red-600 mb-4">
-              <Youtube size={14} />
-              <span className="text-xs font-bold tracking-wide uppercase">Brand Film</span>
-            </div>
-            <h2 className="text-3xl md:text-5xl font-black text-white leading-tight">
-              kt cloud가 만들어가는<br />
-              <span className="text-red-600">디지털 혁신의 미래</span>
-            </h2>
-          </div>
-        </Reveal>
-
+    <section className="py-24 bg-zinc-950 relative border-b border-zinc-900">
+      <div className="container mx-auto px-4">
         <Reveal delay={200}>
-          <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-zinc-800 bg-black aspect-video relative group">
-            {!isPlaying ? (
-              <div 
-                className="absolute inset-0 cursor-pointer" 
-                onClick={() => setIsPlaying(true)}
-              >
-                <img 
-                  src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} 
-                  alt="kt cloud Brand Film" 
-                  className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
-                />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                  <div className="w-20 h-20 bg-red-700 rounded-full flex items-center justify-center pl-1 shadow-[0_0_30px_rgba(185,28,28,0.5)] group-hover:scale-110 transition-transform duration-300">
-                    <Play fill="white" className="text-white" size={32} />
+          <div className="max-w-4xl mx-auto">
+            <div className="relative aspect-video rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl bg-black group">
+              {!isPlaying ? (
+                <button 
+                  onClick={() => setIsPlaying(true)}
+                  className="absolute inset-0 w-full h-full flex items-center justify-center group focus:outline-none cursor-pointer"
+                  aria-label="영상 재생"
+                >
+                  {/* Thumbnail */}
+                  <img 
+                    src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} 
+                    alt="Video Thumbnail" 
+                    className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
+                  
+                  {/* Play Button */}
+                  <div className="relative z-10 w-20 h-20 bg-red-600 rounded-full flex items-center justify-center pl-1 shadow-[0_0_30px_rgba(220,38,38,0.5)] group-hover:scale-110 transition-transform duration-300">
+                    <Play fill="white" className="text-white w-8 h-8" />
                   </div>
-                </div>
-              </div>
-            ) : (
-              <iframe
-                className="w-full h-full"
-                src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
-                title="kt cloud Brand Film"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            )}
+                </button>
+              ) : (
+                <iframe 
+                  width="100%" 
+                  height="100%" 
+                  // autoplay=1과 함께 mute=1을 추가하여 브라우저 자동 재생 정책 준수
+                  src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&rel=0&playsinline=1`} 
+                  title="kt cloud Brand Film" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowFullScreen
+                  className="w-full h-full border-0"
+                ></iframe>
+              )}
+            </div>
+            
+            <div className="mt-6 text-center">
+              <p className="text-zinc-500 text-sm">
+                치열하게 고민하고 함께 성장했던 교육생들의 생생한 모습을 영상으로 확인해보세요.
+              </p>
+            </div>
           </div>
         </Reveal>
       </div>
