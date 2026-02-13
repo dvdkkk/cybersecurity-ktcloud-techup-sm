@@ -6,7 +6,6 @@ import { IntroSection } from './components/IntroSection';
 import { CourseSection } from './components/CourseSection';
 import { VisionSection } from './components/VisionSection';
 import { ReviewSection } from './components/ReviewSection';
-import { EmploymentSection } from './components/EmploymentSection';
 import { ConsultationForm } from './components/ConsultationForm';
 import { Footer } from './components/Footer';
 import { FloatingCTA } from './components/FloatingCTA';
@@ -112,7 +111,6 @@ function AppContent() {
         <CourseSection />
         <InstructorSection />
         <EmploymentSupport />
-        <EmploymentSection />
         <ReviewSection />
         <LearningSpaceSection />
         <ConsultationForm />
