@@ -69,6 +69,7 @@ export const InstructorSection: React.FC = () => {
                 <img 
                   src="https://postfiles.pstatic.net/MjAyNjAyMTNfMjYg/MDAxNzcwOTcwMDg4ODQw.KZ1Vlz6i1wBPZwH1AVCfuCvoN6VpbyEehyb03M73bpcg.JhENNjkiZbbk0hEMa9reVdKH_9X3STtNKiYqLJwMeMUg.PNG/techup_lecturer_security_taewoon.png?type=w966" 
                   alt="강태운 강사" 
+                  referrerPolicy="no-referrer"
                   className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-overlay grayscale hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent md:bg-gradient-to-r"></div>
