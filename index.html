@@ -36,6 +36,13 @@
         width: max-content;
         animation: marquee 60s linear infinite;
       }
+
+      @media (max-width: 768px) {
+        .animate-marquee {
+          animation-duration: 46s;
+        }
+      }
+
       .animate-marquee:hover {
         animation-play-state: paused;
       }

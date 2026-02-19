@@ -49,7 +49,7 @@ export const LearningSpaceSection: React.FC = () => {
     "https://postfiles.pstatic.net/MjAyNjAyMTNfMTg2/MDAxNzcwOTY4NDUxNjEy.8amY2OKWNQ5xGWpz8qF3nEuUoujNVrKxq9-j9E101G0g._kNERBC0F2uyAJiWEvauAz3uZZQ2s4XTrrOWTU0uEHog.PNG/techup_learning_place_05.png?type=w966", 
     "https://postfiles.pstatic.net/MjAyNjAyMTNfMTIx/MDAxNzcwOTY4NDUxOTA0.s5sa4IwsLBaMlpmFM-oXI0NQ8pd-rBPZ32ZqxDJTGrsg.q0I84MbjXHoUYT5x9Xyt15eYSii8Eq56tXS9zOBkDc4g.PNG/8.png?type=w966", 
     "https://postfiles.pstatic.net/MjAyNjAyMTNfMjE3/MDAxNzcwOTY4NDUxNTg5.4LfiWhIq0VnySVbh5i_4fBUjffdLvZsTJURwGaC6740g.E9oR6xohusnI5kNPXHT9Ur1-YnR0E0TtPHhiTntrJKAg.PNG/6_(1).png?type=w966", 
-    "https://postfiles.pstatic.net/MjAyNjAyMTNfNjIg/MDAxNzcwOTY4NDUxNjE1.Gt5p5oF22dtWOJbjcmPs4JSF8ub1RnSugiCb8LXIQBUg.Dno93TrFdv_MsSPzY3t200GZmxEM9YXiLdWdIX5fvnAg.PNG/techup_learning_place_06.png?type=w966", 
+    "https://postfiles.pstatic.net/MjAyNjAyMTNfNjIg/MDAxNzcwOTY4NDUxNjE5.Gt5p5oF22dtWOJbjcmPs4JSF8ub1RnSugiCb8LXIQBUg.Dno93TrFdv_MsSPzY3t200GZmxEM9YXiLdWdIX5fvnAg.PNG/techup_learning_place_06.png?type=w966", 
     "https://postfiles.pstatic.net/MjAyNjAyMTNfNTIg/MDAxNzcwOTY4NDUxOTAz.1N_0vEqDetBUBzxU5nyX9jYlfofeNlP2oKci5kMX2yog.DMzMzyNJmg1nz6YVGXB7pLrL1mXsrStGBHhZV6i7qOog.PNG/2.png?type=w966", 
   ];
 
@@ -83,10 +83,10 @@ export const LearningSpaceSection: React.FC = () => {
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-2xl font-black text-white">구름스퀘어 강남</h3>
-                  <a href="https://map.naver.com" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-xs font-bold text-red-600 bg-red-950/30 px-3 py-1.5 rounded-full border border-red-900/30 hover:bg-red-900/50 transition-colors">
+                  <span className="flex items-center gap-1 text-xs font-bold text-red-600 bg-red-950/30 px-3 py-1.5 rounded-full border border-red-900/30">
                     <MapPin size={12} />
-                    위치 확인
-                  </a>
+                    오프라인
+                  </span>
                 </div>
                 <p className="text-zinc-400 leading-relaxed mb-6 break-keep">
                   구름스퀘어 강남의 쾌적한 공간에서 팀원들과 직접 협업하며 실무와 같은 프로젝트 경험을 쌓을 수 있습니다. 대면 소통을 통해 커뮤니케이션과 팀워크 역량을 자연스럽게 키울 수 있습니다.
