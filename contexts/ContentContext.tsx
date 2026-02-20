@@ -5,9 +5,9 @@ import { COURSES, EMPLOYMENT_STATUS, PROCESS_STEPS } from '../constants';
 
 const defaultContent: SiteContent = {
   hero: {
-    badge: "보안 분야 미래유망직종 1위",
-    title: "미래를 여는 클라우드 보안 기술",
-    highlight: "kt cloud 사이버 보안",
+    badge: "AI시대 유망직종 1위",
+    title: "미래를 여는 보안 기술",
+    highlight: "kt cloud 사이버 보안전문가",
     description: "데이터와 서비스를 수호하는 보안 전문가 과정입니다.",
     stats: [
       { label: '모집여부', value: '모집 중(7개월과정)' },
