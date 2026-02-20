@@ -85,6 +85,7 @@ export const LearningSpaceSection: React.FC = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" 
                   alt="강남 오피스 배경" 
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-60 transition-all duration-1000"
                 />
                 {/* Darker Gradient Overlay for Text Legibility */}
@@ -119,6 +120,7 @@ export const LearningSpaceSection: React.FC = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=2070&auto=format&fit=crop" 
                   alt="메타버스 배경" 
+                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-60 transition-all duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-900/80 to-zinc-900/40"></div>

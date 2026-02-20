@@ -233,6 +233,7 @@ export const CourseSection: React.FC = () => {
                       <img 
                         src={item.image} 
                         alt={item.title} 
+                        referrerPolicy="no-referrer"
                         className="w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-700"
                       />
                       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-transparent"></div>

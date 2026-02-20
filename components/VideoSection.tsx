@@ -61,6 +61,7 @@ export const VideoSection: React.FC = () => {
                   <img 
                     src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`} 
                     alt="Video Thumbnail" 
+                    referrerPolicy="no-referrer"
                     className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                   />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300"></div>
