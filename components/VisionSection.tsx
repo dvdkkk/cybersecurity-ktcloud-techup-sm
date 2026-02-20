@@ -120,8 +120,8 @@ export const VisionSection: React.FC = () => {
               <span className="text-xs font-bold tracking-wide uppercase">Vision</span>
            </div>
           <h2 className="text-3xl md:text-5xl font-black text-white leading-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
-            모든 기업이 원하는 보안 전문가,<br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-white animate-pulse">전문인력 부족으로 고연봉 취업!</span>
+            기업이 원하는 보안 전문가,<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-white animate-pulse">전문인력 부족 고연봉 취업!</span>
           </h2>
            <p className="text-zinc-500 mt-4 text-sm">
              미래 산업의 핵심 인재로 성장할 수 있는 확실한 비전을 제시합니다.
