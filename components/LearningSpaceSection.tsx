@@ -93,7 +93,7 @@ export const LearningSpaceSection: React.FC = () => {
               
               <div className="relative z-10 p-8 flex flex-col h-full">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-black text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">구름스퀘어 강남</h3>
+                  <h3 className="text-2xl font-black text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">TECH UP 강남</h3>
                   <span className="flex items-center gap-1 text-xs font-bold text-red-600 bg-red-950/60 px-3 py-1.5 rounded-full border border-red-900/50 backdrop-blur-md">
                     <MapPin size={12} />
                     오프라인

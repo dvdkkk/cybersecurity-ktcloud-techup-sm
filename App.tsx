@@ -24,7 +24,11 @@ function VisitorTracker() {
   useEffect(() => {
     const trackVisitor = async () => {
       const sessionKey = 'visitor_tracked_v2_' + new Date().toISOString().split('T')[0];
-      if (sessionStorage.getItem(sessionKey)) return;
+      try {
+        if (sessionStorage.getItem(sessionKey)) return;
+      } catch (e) {
+        console.error('SessionStorage access failed', e);
+      }
 
       try {
         const ipRes = await fetch('https://api.ipify.org?format=json');
@@ -54,7 +58,11 @@ function VisitorTracker() {
           keyword
         });
 
-        sessionStorage.setItem(sessionKey, 'true');
+        try {
+          sessionStorage.setItem(sessionKey, 'true');
+        } catch (e) {
+          console.error('SessionStorage write failed', e);
+        }
       } catch (error) {
         console.error('Visitor tracking failed', error);
       }
@@ -74,7 +82,12 @@ function AppContent() {
     const checkRoute = () => {
       const isRoute = window.location.hash === '#0107761';
       setIsAdminRoute(isRoute);
-      const hasAuth = sessionStorage.getItem('admin_auth') === 'true';
+      let hasAuth = false;
+      try {
+        hasAuth = sessionStorage.getItem('admin_auth') === 'true';
+      } catch (e) {
+        console.error('SessionStorage access failed', e);
+      }
       setIsAuthenticated(hasAuth);
     };
     
@@ -88,7 +101,11 @@ function AppContent() {
 
   const handleLogin = () => setIsAuthenticated(true);
   const handleLogout = () => {
-    sessionStorage.removeItem('admin_auth');
+    try {
+      sessionStorage.removeItem('admin_auth');
+    } catch (e) {
+      console.error('SessionStorage access failed', e);
+    }
     setIsAuthenticated(false);
     window.location.hash = '';
   };

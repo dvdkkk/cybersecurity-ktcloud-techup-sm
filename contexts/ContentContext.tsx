@@ -150,26 +150,30 @@ export const ContentProvider: React.FC<{ children: ReactNode }> = ({ children })
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const savedContent = localStorage.getItem(STORAGE_KEY);
-    if (savedContent) {
-      try {
-        const parsed = JSON.parse(savedContent);
-        setContent({ ...defaultContent, ...parsed });
-      } catch (e) {
-        console.error("Failed to load content", e);
+    try {
+      const savedContent = localStorage.getItem(STORAGE_KEY);
+      if (savedContent) {
+        try {
+          const parsed = JSON.parse(savedContent);
+          setContent({ ...defaultContent, ...parsed });
+        } catch (e) {
+          console.error("Failed to load content", e);
+        }
       }
-    }
 
-    const savedLogs = localStorage.getItem(LOG_KEY);
-    if (savedLogs) {
-      try {
-        setVisitorLogs(JSON.parse(savedLogs));
-      } catch (e) {
-        console.error("Failed to load logs", e);
+      const savedLogs = localStorage.getItem(LOG_KEY);
+      if (savedLogs) {
+        try {
+          setVisitorLogs(JSON.parse(savedLogs));
+        } catch (e) {
+          console.error("Failed to load logs", e);
+        }
       }
+    } catch (e) {
+      console.error("LocalStorage access failed", e);
+    } finally {
+      setIsLoaded(true);
     }
-
-    setIsLoaded(true);
   }, []);
 
   const updateContent = (newContent: SiteContent) => {
