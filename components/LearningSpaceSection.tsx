@@ -49,7 +49,7 @@ export const LearningSpaceSection: React.FC = () => {
     "https://postfiles.pstatic.net/MjAyNjAyMTNfMTg2/MDAxNzcwOTY4NDUxNjEy.8amY2OKWNQ5xGWpz8qF3nEuUoujNVrKxq9-j9E101G0g._kNERBC0F2uyAJiWEvauAz3uZZQ2s4XTrrOWTU0uEHog.PNG/techup_learning_place_05.png?type=w966", 
     "https://postfiles.pstatic.net/MjAyNjAyMTNfMTIx/MDAxNzcwOTY4NDUxOTA0.s5sa4IwsLBaMlpmFM-oXI0NQ8pd-rBPZ32ZqxDJTGrsg.q0I84MbjXHoUYT5x9Xyt15eYSii8Eq56tXS9zOBkDc4g.PNG/8.png?type=w966", 
     "https://postfiles.pstatic.net/MjAyNjAyMTNfMjE3/MDAxNzcwOTY4NDUxNTg5.4LfiWhIq0VnySVbh5i_4fBUjffdLvZsTJURwGaC6740g.E9oR6xohusnI5kNPXHT9Ur1-YnR0E0TtPHhiTntrJKAg.PNG/6_(1).png?type=w966", 
-    "https://postfiles.pstatic.net/MjAyNjAyMTNfNjIg/MDAxNzcwOTY4NDUxNjE5.Gt5p5oF22dtWOJbjcmPs4JSF8ub1RnSugiCb8LXIQBUg.Dno93TrFdv_MsSPzY3t200GZmxEM9YXiLdWdIX5fvnAg.PNG/techup_learning_place_06.png?type=w966", 
+    "https://postfiles.pstatic.net/MjAyNjAyMTNfODcg/MDAxNzcwOTY4NDUxNTkw.1WAWd7TrYWI3zlNRXEdNR-ZBjf_UnzieNP9WpsGvd5Ug.DF3dwuzOdCliEE-84uhnl89S_xVkTq8iPGZCL_5WyPcg.PNG/3.png?type=w966", 
     "https://postfiles.pstatic.net/MjAyNjAyMTNfNTIg/MDAxNzcwOTY4NDUxOTAz.1N_0vEqDetBUBzxU5nyX9jYlfofeNlP2oKci5kMX2yog.DMzMzyNJmg1nz6YVGXB7pLrL1mXsrStGBHhZV6i7qOog.PNG/2.png?type=w966", 
   ];
 
