@@ -139,7 +139,7 @@ export const VisionSection: React.FC = () => {
                 <div className="text-center md:text-left">
                   <span className="block text-[10px] text-red-400 font-bold uppercase tracking-[0.2em] mb-1">Market Insight</span>
                   <h3 className="text-2xl md:text-3xl font-black text-white leading-none">
-                    국내 기업 내 <span className="text-red-500 underline decoration-4 underline-offset-4 decoration-red-900">보안인력 연봉</span>
+                    국내 기업 <span className="text-red-500 underline decoration-4 underline-offset-4 decoration-red-900">보안인력 연봉</span>
                   </h3>
                 </div>
              </div>
