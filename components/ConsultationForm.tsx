@@ -79,7 +79,7 @@ export const ConsultationForm: React.FC = () => {
     
     try {
       // 요청하신 데이터 수집용 Formspree 엔드포인트
-      const response = await fetch("https://formspree.io/f/xqedzajp", {
+      const response = await fetch("https://formspree.io/f/xpqjpjpb", {
         method: "POST",
         body: data,
         headers: {
