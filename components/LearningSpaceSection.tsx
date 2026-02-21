@@ -49,7 +49,7 @@ export const LearningSpaceSection: React.FC = () => {
     "https://postfiles.pstatic.net/MjAyNjAyMTNfMTg2/MDAxNzcwOTY4NDUxNjEy.8amY2OKWNQ5xGWpz8qF3nEuUoujNVrKxq9-j9E101G0g._kNERBC0F2uyAJiWEvauAz3uZZQ2s4XTrrOWTU0uEHog.PNG/techup_learning_place_05.png?type=w966", 
     "https://postfiles.pstatic.net/MjAyNjAyMTNfMTIx/MDAxNzcwOTY4NDUxOTA0.s5sa4IwsLBaMlpmFM-oXI0NQ8pd-rBPZ32ZqxDJTGrsg.q0I84MbjXHoUYT5x9Xyt15eYSii8Eq56tXS9zOBkDc4g.PNG/8.png?type=w966", 
     "https://postfiles.pstatic.net/MjAyNjAyMTNfMjE3/MDAxNzcwOTY4NDUxNTg5.4LfiWhIq0VnySVbh5i_4fBUjffdLvZsTJURwGaC6740g.E9oR6xohusnI5kNPXHT9Ur1-YnR0E0TtPHhiTntrJKAg.PNG/6_(1).png?type=w966", 
-    "https://postfiles.pstatic.net/MjAyNjAyMTNfODcg/MDAxNzcwOTY4NDUxNTkw.1WAWd7TrYWI3zlNRXEdNR-ZBjf_UnzieNP9WpsGvd5Ug.DF3dwuzOdCliEE-84uhnl89S_xVkTq8iPGZCL_5WyPcg.PNG/3.png?type=w966", 
+    "https://postfiles.pstatic.net/MjAyNjAyMTNfODAg/MDAxNzcwOTY4NDUxOTEx.m-kASXuHTi6jO4TJ9BuMan5oypX9bSa3c2rO7_2WtUkg.Fv2MEglGM-k-LvMxuEhmIhEWaIVlIDSGDu-wCaEeJgcg.PNG/4.png?type=w966", 
     "https://postfiles.pstatic.net/MjAyNjAyMTNfNTIg/MDAxNzcwOTY4NDUxOTAz.1N_0vEqDetBUBzxU5nyX9jYlfofeNlP2oKci5kMX2yog.DMzMzyNJmg1nz6YVGXB7pLrL1mXsrStGBHhZV6i7qOog.PNG/2.png?type=w966", 
   ];
 
@@ -77,7 +77,7 @@ export const LearningSpaceSection: React.FC = () => {
         </Reveal>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {/* 구름스퀘어 강남 */}
+          {/* TECH UP 강남 */}
           <Reveal delay={100} className="h-full">
             <div className="h-full bg-zinc-900 border border-zinc-800 rounded-3xl hover:border-red-900/50 transition-all duration-500 group relative overflow-hidden shadow-2xl min-h-[320px]">
               {/* Background Image Layer: Opacity increased and blend removed for visibility */}
@@ -85,7 +85,6 @@ export const LearningSpaceSection: React.FC = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" 
                   alt="강남 오피스 배경" 
-                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-60 transition-all duration-1000"
                 />
                 {/* Darker Gradient Overlay for Text Legibility */}
@@ -101,7 +100,7 @@ export const LearningSpaceSection: React.FC = () => {
                   </span>
                 </div>
                 <p className="text-white leading-relaxed mb-6 break-keep font-medium drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-                  구름스퀘어 강남의 쾌적한 공간에서 팀원들과 직접 협업하며 실무와 같은 프로젝트 경험을 쌓을 수 있습니다. 대면 소통을 통해 커뮤니케이션과 팀워크 역량을 자연스럽게 키울 수 있습니다.
+                  TECH UP 강남의 쾌적한 공간에서 팀원들과 직접 협업하며 실무와 같은 프로젝트 경험을 쌓을 수 있습니다. 대면 소통을 통해 커뮤니케이션과 팀워크 역량을 자연스럽게 키울 수 있습니다.
                 </p>
                 <div className="mt-auto flex flex-wrap gap-2">
                   <span className="text-[10px] text-zinc-300 bg-black/80 px-2 py-1 rounded border border-zinc-700 backdrop-blur-sm">#쾌적한환경</span>
@@ -120,7 +119,6 @@ export const LearningSpaceSection: React.FC = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=2070&auto=format&fit=crop" 
                   alt="메타버스 배경" 
-                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover opacity-40 group-hover:scale-110 group-hover:opacity-60 transition-all duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-900/80 to-zinc-900/40"></div>

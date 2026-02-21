@@ -23,10 +23,18 @@ export const Footer: React.FC = () => {
                 <p className="font-bold text-zinc-400 mb-2">고객센터</p>
                 <a 
                   href="tel:18775280" 
-                  className="text-2xl font-bold text-white hover:text-red-600 transition-colors md:pointer-events-none md:cursor-default md:hover:text-white inline-block"
+                  className="text-2xl font-bold text-white hover:text-red-600 transition-colors md:pointer-events-none md:cursor-default md:hover:text-white inline-block mb-4"
                 >
                   1877-5280
                 </a>
+                <div>
+                  <button 
+                    onClick={() => window.open('/#privacy', '_blank')}
+                    className="text-xs text-zinc-500 hover:text-white underline transition-colors"
+                  >
+                    개인정보처리방침
+                  </button>
+                </div>
             </div>
         </div>
 
