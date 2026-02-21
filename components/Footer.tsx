@@ -27,14 +27,6 @@ export const Footer: React.FC = () => {
                 >
                   1877-5280
                 </a>
-                <div>
-                  <button 
-                    onClick={() => window.open('/#privacy', '_blank')}
-                    className="text-xs text-zinc-500 hover:text-white underline transition-colors"
-                  >
-                    개인정보처리방침
-                  </button>
-                </div>
             </div>
         </div>
 

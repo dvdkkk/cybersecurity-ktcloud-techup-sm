@@ -26,7 +26,7 @@ const CURRICULUM_DATA = [
     id: "month-2",
     month: "2개월",
     title: "심화 보안 기술 및 대응",
-    desc: "암호학부터 취약점 진단까지 심화 기술을 습득합니다.",
+    desc: "암호학부터 취약점진단까지 심화기술을 습득합니다.",
     image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2940&auto=format&fit=crop",
     subjects: [
       { title: "암호학", desc: "대칭/비대칭 키 암호화, 해시 함수(MD5, SHA 등), PKI 인증서, TLS/SSL 통신 보안 등 암호화 기법과 양자 암호화 기술 동향을 학습합니다." },
