@@ -10,7 +10,7 @@ const defaultContent: SiteContent = {
     highlight: "kt cloud 사이버 보안전문가",
     description: "데이터와 서비스를 수호하는 보안 전문가 과정입니다.",
     stats: [
-      { label: '모집여부', value: '모집 중(7개월과정)' },
+      { label: '개강일', value: '26.9.31(7개월과정)' },
       { label: '교육시간', value: '월~금 09:00~18:00' },
       { label: '수강료', value: '96%~100% 국비지원' },
       { label: '수업형태', value: '100%온라인/실시간 비대면' },

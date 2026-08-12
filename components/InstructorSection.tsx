@@ -68,16 +68,16 @@ export const InstructorSection: React.FC = () => {
               <div className="md:w-2/5 relative min-h-[400px] md:min-h-full bg-zinc-800">
                 <img 
                   src="https://postfiles.pstatic.net/MjAyNjAyMTNfMjYg/MDAxNzcwOTcwMDg4ODQw.KZ1Vlz6i1wBPZwH1AVCfuCvoN6VpbyEehyb03M73bpcg.JhENNjkiZbbk0hEMa9reVdKH_9X3STtNKiYqLJwMeMUg.PNG/techup_lecturer_security_taewoon.png?type=w966" 
-                  alt="강태운 강사" 
+                  alt="배성진" 
                   referrerPolicy="no-referrer"
                   className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-overlay grayscale hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent md:bg-gradient-to-r"></div>
                 
                 <div className="absolute bottom-8 left-8 right-8">
-                  <h3 className="text-3xl font-black text-white mb-1">강태운</h3>
+                  <h3 className="text-3xl font-black text-white mb-1">배성진</h3>
                   <p className="text-red-500 font-bold text-sm uppercase tracking-wider">Expert Instructor</p>
-                  <p className="text-zinc-400 text-sm mt-2 font-medium">정보보안 및 데이터 분석 전문가</p>
+                  <p className="text-zinc-400 text-sm mt-2 font-medium">보안아키텍처팀 ㅣ kt cloud 사이버 보안</p>
                 </div>
               </div>
 
@@ -102,21 +102,21 @@ export const InstructorSection: React.FC = () => {
                       <div className="mt-1 w-2 h-2 rounded-full bg-red-600 shadow-[0_0_8px_rgba(220,38,38,0.8)] group-hover:scale-150 transition-transform"></div>
                       <div>
                         <span className="text-xs font-bold text-red-500 bg-red-950/30 px-2 py-0.5 rounded border border-red-900/30 mb-1 inline-block">Current</span>
-                        <p className="text-zinc-200 font-bold text-lg">마켓인사이트 대표</p>
+                        <p className="text-zinc-200 font-bold text-lg">보안아키텍처팀</p>
                       </div>
                     </li>
 
                     <li className="flex gap-4 items-start group">
                       <div className="mt-1 w-2 h-2 rounded-full bg-zinc-600 group-hover:bg-zinc-400 transition-colors"></div>
                       <div>
-                        <p className="text-zinc-400 font-medium">제이앤에이치프랜즈 정보보안 담당</p>
+                        <p className="text-zinc-400 font-medium">누구나 보안 전문가로 성장할 수 있습니다. </p>
                       </div>
                     </li>
 
                     <li className="flex gap-4 items-start group">
                       <div className="mt-1 w-2 h-2 rounded-full bg-zinc-600 group-hover:bg-zinc-400 transition-colors"></div>
                       <div>
-                        <p className="text-zinc-400 font-medium">정보보호 취약점 제보 및 대회 출제 다수</p>
+                        <p className="text-zinc-400 font-medium">현장의 생생한 경험과 커리어 전략을 통해 그 길을 함께 열어갑시다.</p>
                       </div>
                     </li>
                   </ul>
