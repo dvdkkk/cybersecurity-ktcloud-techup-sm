@@ -58,9 +58,12 @@ export const ConsultationForm: React.FC = () => {
         const data = await response.json();
         if (data.ip) {
           setIpAddress(data.ip);
+        } else {
+          setIpAddress('0.0.0.0');
         }
       } catch (error) {
-        console.error('IP 수집 실패:', error);
+        setIpAddress('0.0.0.0');
+        console.warn('IP 수집 실패:', error instanceof Error ? error.message : error);
       }
     };
     fetchIp();

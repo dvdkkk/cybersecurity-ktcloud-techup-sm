@@ -27,14 +27,19 @@ function VisitorTracker() {
       try {
         if (sessionStorage.getItem(sessionKey)) return;
       } catch (e) {
-        console.error('SessionStorage access failed', e);
+        console.warn('SessionStorage access failed', e);
       }
 
+      let ip = '0.0.0.0';
       try {
         const ipRes = await fetch('https://api.ipify.org?format=json');
         const ipData = await ipRes.json();
-        const ip = ipData.ip;
+        ip = ipData.ip || '0.0.0.0';
+      } catch (e) {
+        console.warn('IP fetch failed, falling back to default', e instanceof Error ? e.message : e);
+      }
 
+      try {
         const referrer = document.referrer || '직접 접속';
         let keyword = '없음';
         
@@ -61,10 +66,10 @@ function VisitorTracker() {
         try {
           sessionStorage.setItem(sessionKey, 'true');
         } catch (e) {
-          console.error('SessionStorage write failed', e);
+          console.warn('SessionStorage write failed', e);
         }
       } catch (error) {
-        console.error('Visitor tracking failed', error);
+        console.warn('Visitor tracking processing failed', error instanceof Error ? error.message : error);
       }
     };
 
@@ -86,7 +91,7 @@ function AppContent() {
       try {
         hasAuth = sessionStorage.getItem('admin_auth') === 'true';
       } catch (e) {
-        console.error('SessionStorage access failed', e);
+        console.warn('SessionStorage access failed', e);
       }
       setIsAuthenticated(hasAuth);
     };
@@ -104,7 +109,7 @@ function AppContent() {
     try {
       sessionStorage.removeItem('admin_auth');
     } catch (e) {
-      console.error('SessionStorage access failed', e);
+      console.warn('SessionStorage access failed', e);
     }
     setIsAuthenticated(false);
     window.location.hash = '';
