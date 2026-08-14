@@ -80,8 +80,8 @@ export const EmploymentSupport: React.FC = () => {
     },
     {
       id: 5,
-      title: "우수 수료생 채용 지원 시 우대",
-      desc: "탁월한 성과를 인정받은 우수 수료생은 kt cloud 채용 과정에서 우대 혜택을 받아 취업 경쟁력을 높일 수 있습니다.",
+      title: "실전 경험으로 쌓는 취업 경쟁력",
+      desc: "프로젝트 기반의 실전 커리큘럼과 현직자 피드백을 통해 실무 역량을 쌓으며, 취업 시장에서 경쟁력 있는 포트폴리오와 역량을 갖출 수 있습니다.",
       icon: Award,
       color: "text-red-500",
       bgHover: "group-hover:bg-red-500/10",
