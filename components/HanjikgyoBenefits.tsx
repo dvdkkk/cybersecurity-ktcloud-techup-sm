@@ -54,8 +54,8 @@ export const HanjikgyoBenefits: React.FC = () => {
     },
     {
       id: 2,
-      title: "고성능 실무용 노트북 대여",
-      desc: "기기 성능 걱정 없이 교육에만 몰입할 수 있도록, 프로젝트 수행에 최적화된 고사양 노트북 대여 서비스를 제공합니다.",
+      title: "온라인 학습환경 제공",
+      desc: "기기 성능 걱정 없이 교육에만 몰입할 수 있도록, 프로젝트 수행에 최적화된 온라인 학습환경 서비스를 제공합니다.",
       icon: Laptop,
       highlight: "text-blue-500"
     },
