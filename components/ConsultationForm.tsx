@@ -1,6 +1,7 @@
 
-import React, { useState, useRef, useEffect, ReactNode } from 'react';
-import { Send, Phone, MapPin, ChevronDown, ChevronUp } from 'lucide-react';
+import React, { useRef, useEffect, ReactNode } from 'react';
+import { Phone, MapPin, ArrowUpRight, Sparkles } from 'lucide-react';
+import { handlePhoneClick } from '../constants';
 
 // 스크롤 애니메이션 컴포넌트
 interface RevealProps {
@@ -11,7 +12,7 @@ interface RevealProps {
 
 const Reveal: React.FC<RevealProps> = ({ children, className = "", delay = 0 }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = React.useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -45,215 +46,94 @@ const Reveal: React.FC<RevealProps> = ({ children, className = "", delay = 0 }) 
 };
 
 export const ConsultationForm: React.FC = () => {
-  const [status, setStatus] = useState<"IDLE" | "SUBMITTING" | "SUCCESS" | "ERROR">("IDLE");
-  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
-  const [isAgreed, setIsAgreed] = useState(true);
-  const [ipAddress, setIpAddress] = useState('');
-
-  // 접속자 IP 가져오기
-  useEffect(() => {
-    const fetchIp = async () => {
-      try {
-        const response = await fetch('https://api.ipify.org?format=json');
-        const data = await response.json();
-        if (data.ip) {
-          setIpAddress(data.ip);
-        } else {
-          setIpAddress('0.0.0.0');
-        }
-      } catch (error) {
-        setIpAddress('0.0.0.0');
-        console.warn('IP 수집 실패:', error instanceof Error ? error.message : error);
-      }
-    };
-    fetchIp();
-  }, []);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!isAgreed) {
-      alert("개인정보 수집 및 이용에 동의해야 합니다.");
-      return;
-    }
-    
-    const form = e.currentTarget;
-    const data = new FormData(form);
-
-    // 낙관적 UI (Optimistic UI): 즉시 성공 처리 및 폼 리셋
-    setStatus("SUCCESS");
-    form.reset();
-
-    // 백그라운드 전송 (keepalive 보장)
-    try {
-      fetch("https://inputhaven.com/api/v1/submit", {
-        method: "POST",
-        body: data,
-        keepalive: true
-      }).catch((error) => {
-        console.warn("Background submission warning:", error);
-      });
-    } catch (error) {
-      console.warn("Background submission warning:", error);
-    }
-  };
-
   return (
-    <section id="consultation" className="py-8 bg-yellow-400 text-zinc-900 scroll-mt-24">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section id="consultation" className="py-12 md:py-16 bg-yellow-400 text-zinc-900 scroll-mt-24">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
           
           {/* Left Text */}
-          <div className="space-y-6 lg:sticky lg:top-24">
+          <div className="space-y-6">
             <Reveal>
-              <h2 className="text-3xl md:text-4xl font-black leading-tight mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-4 text-zinc-950">
                 망설이지 마세요.<br/>
                 보안 전문가가 <br/>
                 친절하게 안내해드립니다.
               </h2>
-              <p className="text-lg font-medium text-zinc-800 mb-6">
+              <p className="text-lg font-medium text-zinc-800 mb-6 leading-relaxed">
                 국비지원 자격 여부부터 취업 및 교육과정까지<br/>
-                <span className="border-b-2 border-black">무료로 상담해드립니다.</span>
+                <span className="border-b-2 border-black font-bold">무료로 상담해드립니다.</span>
               </p>
               
-              <div className="space-y-3 pt-4">
-                  <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 bg-black text-yellow-400 rounded-full flex items-center justify-center">
-                          <Phone size={20} />
-                      </div>
-                      <div>
-                          <p className="text-xs font-bold opacity-70">교육문의</p>
-                          <a href="tel:18775280" className="text-2xl font-black block hover:opacity-80 transition-opacity md:pointer-events-none md:cursor-default">1877-5280</a>
-                      </div>
+              <div className="space-y-3 pt-2">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-black text-yellow-400 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone size={20} />
                   </div>
-                  <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 bg-black text-yellow-400 rounded-full flex items-center justify-center">
-                          <MapPin size={20} />
-                      </div>
-                      <div>
-                          <p className="text-xs font-bold opacity-70">교육방식</p>
-                          <p className="text-lg font-bold">100%온라인</p>
-                      </div>
+                  <div>
+                    <p className="text-xs font-bold opacity-70">교육문의</p>
+                    <a 
+                      href="tel:18775280" 
+                      onClick={handlePhoneClick}
+                      className="text-2xl font-black block hover:opacity-80 transition-opacity text-zinc-950 cursor-pointer"
+                    >
+                      1877-5280
+                    </a>
                   </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-10 bg-black text-yellow-400 rounded-full flex items-center justify-center flex-shrink-0">
+                    <MapPin size={20} />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold opacity-70">교육방식</p>
+                    <p className="text-lg font-bold text-zinc-950">100% 온라인</p>
+                  </div>
+                </div>
               </div>
-              <p className="font-bold text-base mt-4">여러분의 꿈을 응원합니다!</p>
+              <p className="font-bold text-base mt-4 text-zinc-950">여러분의 꿈을 응원합니다!</p>
             </Reveal>
           </div>
 
-          {/* Right Form */}
-          <Reveal delay={200} className="h-full">
-            <div className="bg-white text-black rounded-2xl p-4 md:p-7 shadow-2xl h-full">
-              {status === "SUCCESS" ? (
-                  <div className="text-center py-12">
-                      <div className="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                          <Send size={28} />
-                      </div>
-                      <h3 className="text-xl font-bold mb-2">상담 신청이 완료되었습니다!</h3>
-                      <p className="text-gray-600 text-sm">빠른 시일 내에 전문 상담원이 연락드리겠습니다.</p>
-                      <button onClick={() => setStatus("IDLE")} className="mt-6 text-xs text-gray-500 underline">다시 작성하기</button>
-                  </div>
-              ) : (
-                  <form onSubmit={handleSubmit} className="space-y-2 md:space-y-3">
-                  {/* IP 주소 및 메타데이터 */}
-                  <input type="hidden" name="user_ip" value={ipAddress} />
-                  <input type="hidden" name="_subject" value="[신규 상담 신청] kt cloud 사이버 보안" />
-                  <input type="hidden" name="_form_id" value="914168973e93bda60f4eac1e7cbe1449" />
+          {/* Right Consultation CTA Button Area (Targeted Element) */}
+          <Reveal delay={200} className="w-full">
+            <div className="bg-zinc-950 text-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl border border-zinc-800 flex flex-col items-center text-center relative overflow-hidden group">
+              {/* Decorative background glow */}
+              <div className="absolute -top-16 -right-16 w-48 h-48 bg-red-600/15 rounded-full blur-3xl pointer-events-none group-hover:bg-red-600/25 transition-all duration-500" />
+              <div className="absolute -bottom-16 -left-16 w-48 h-48 bg-yellow-400/10 rounded-full blur-3xl pointer-events-none" />
 
-                  <h3 className="text-lg font-bold mb-2 md:mb-3 flex items-center gap-2">
-                      빠른 교육상담 신청
-                      <span className="w-2 h-2 rounded-full bg-red-600 animate-pulse"></span>
-                  </h3>
-                  
-                  <div className="grid md:grid-cols-2 gap-2 md:gap-3">
-                      <div className="space-y-0.5 md:space-y-1">
-                          <label className="text-xs font-bold text-gray-700 ml-1">이름</label>
-                          <input required name="이름" type="text" placeholder="홍길동" className="w-full px-3 py-2 md:py-2.5 rounded-lg border border-gray-200 focus:border-red-600 focus:ring-2 focus:ring-red-600/20 outline-none transition-all text-sm" />
-                      </div>
-                      <div className="space-y-0.5 md:space-y-1">
-                          <label className="text-xs font-bold text-gray-700 ml-1">나이</label>
-                          <input required name="나이" type="text" placeholder="예: 30" className="w-full px-3 py-2 md:py-2.5 rounded-lg border border-gray-200 focus:border-red-600 focus:ring-2 focus:ring-red-600/20 outline-none transition-all text-sm" />
-                      </div>
-                  </div>
+              <div className="relative z-10 w-full flex flex-col items-center">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-950/80 border border-red-800/60 text-red-400 text-xs font-bold mb-4 shadow-sm">
+                  <Sparkles size={14} className="text-red-500 animate-pulse" />
+                  <span>국비지원 & 1:1 맞춤 상담</span>
+                </div>
 
-                  <div className="space-y-0.5 md:space-y-1">
-                      <label className="text-xs font-bold text-gray-700 ml-1">연락처</label>
-                      <input required name="연락처" type="tel" placeholder="010-0000-0000" className="w-full px-3 py-2 md:py-2.5 rounded-lg border border-gray-200 focus:border-red-600 focus:ring-2 focus:ring-red-600/20 outline-none transition-all text-sm" />
-                  </div>
+                <h3 className="text-2xl sm:text-3xl font-black text-white mb-3 tracking-tight">
+                  교육상담 & 수강신청
+                </h3>
 
-                  <div className="space-y-0.5 md:space-y-1">
-                      <label className="text-xs font-bold text-gray-700 ml-1">교육목적</label>
-                      <div className="flex flex-wrap gap-1.5 md:gap-2">
-                          {['취업/이직', '자기개발', '창업', '기타'].map((purpose) => (
-                              <label key={purpose} className="flex items-center gap-2 p-1.5 md:p-2 border rounded-lg cursor-pointer hover:bg-gray-50 flex-1 min-w-[80px] justify-center">
-                                  <input type="radio" name="교육목적" value={purpose} required className="accent-red-700 w-3.5 h-3.5" />
-                                  <span className="text-xs font-bold">{purpose}</span>
-                              </label>
-                          ))}
-                      </div>
-                  </div>
+                <p className="text-zinc-400 text-sm sm:text-base mb-8 max-w-sm leading-relaxed">
+                  국비지원 대상 여부 및 취업 연계 혜택을<br className="hidden sm:inline" />
+                  전문 컨설턴트가 빠르고 정확하게 안내해 드립니다.
+                </p>
 
-                  <div className="space-y-0.5 md:space-y-1">
-                      <label className="text-xs font-bold text-gray-700 ml-1">문의내용</label>
-                      <textarea name="문의내용" rows={2} placeholder="궁금하신 점을 자유롭게 적어주세요." className="w-full px-3 py-2 md:py-2.5 rounded-lg border border-gray-200 focus:border-red-600 focus:ring-2 focus:ring-red-600/20 outline-none transition-all resize-none text-sm"></textarea>
-                  </div>
+                <a
+                  href="https://naver.me/5ajXDpLu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full py-4 sm:py-5 px-6 sm:px-8 bg-red-600 hover:bg-red-500 active:scale-98 text-white font-black text-lg sm:text-xl rounded-2xl shadow-[0_10px_25px_rgba(220,38,38,0.45)] hover:shadow-[0_15px_35px_rgba(220,38,38,0.65)] hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-3 group/btn"
+                  id="consultation-cta-button"
+                >
+                  <span>상담신청하기</span>
+                  <ArrowUpRight size={22} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                </a>
 
-                  {/* Privacy Policy */}
-                  <div className="pt-2 border-t border-gray-100">
-                      <div className="flex items-center justify-between mb-1">
-                          <label className="flex items-center gap-2 cursor-pointer select-none">
-                              <input 
-                                  type="checkbox" 
-                                  checked={isAgreed}
-                                  onChange={(e) => setIsAgreed(e.target.checked)}
-                                  className="w-4 h-4 accent-red-700 rounded cursor-pointer" 
-                              />
-                              <span className="text-xs font-bold text-gray-700">
-                                  개인정보 수집 및 이용에 동의합니다.
-                              </span>
-                          </label>
-                          <button 
-                              type="button"
-                              onClick={() => setIsPrivacyOpen(!isPrivacyOpen)}
-                              className="text-[10px] font-bold text-gray-500 hover:text-black flex items-center gap-1 bg-gray-100 px-2 py-1 rounded"
-                          >
-                              {isPrivacyOpen ? '접기' : '자세히보기'}
-                              {isPrivacyOpen ? <ChevronUp size={10}/> : <ChevronDown size={10}/>}
-                          </button>
-                      </div>
-
-                      {isPrivacyOpen && (
-                          <div className="bg-gray-50 p-2.5 rounded-lg text-[10px] text-black animate-fade-in-down border border-gray-200 mb-2">
-                              <h5 className="font-bold mb-1.5">개인정보 수집 및 이용 동의 (필수)</h5>
-                              <p className="mb-2 leading-tight">kt cloud TECH UP 실시간온라인문의 신청을 위해 다음과 같이 개인정보를 수집 및 이용합니다.</p>
-                              
-                              <div className="grid grid-cols-[60px_1fr] gap-y-1.5 gap-x-2 border-t border-gray-200 pt-2 text-left">
-                                  <div className="font-bold text-gray-600 bg-gray-100 rounded px-1 py-0.5 text-center">수집목적</div>
-                                  <div className="font-medium py-0.5">온라인문의</div>
-                                  
-                                  <div className="font-bold text-gray-600 bg-gray-100 rounded px-1 py-0.5 text-center">수집항목</div>
-                                  <div className="font-medium py-0.5">이름, 나이, 연락처, 교육목적, 문의내용</div>
-                                  
-                                  <div className="font-bold text-gray-600 bg-gray-100 rounded px-1 py-0.5 text-center">보유기간</div>
-                                  <div className="font-medium py-0.5">60일</div>
-                              </div>
-                          </div>
-                      )}
-                  </div>
-
-                  <button 
-                      type="submit"
-                      disabled={status === "SUBMITTING"}
-                      className="w-full bg-black text-white font-bold py-3 rounded-lg text-base hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2 shadow-lg disabled:bg-gray-400"
-                  >
-                      {status === "SUBMITTING" ? "전송 중..." : "무료상담 신청하기"}
-                      <Send size={16} />
-                  </button>
-                  <p className="text-[10px] text-center text-gray-500 mt-2">
-                      개인정보는 상담 목적으로만 사용되며 안전하게 보호됩니다.
-                  </p>
-                  </form>
-              )}
+                <p className="text-xs text-zinc-500 mt-4 flex items-center justify-center gap-1.5">
+                  <span>안전한 네이버 폼 상담 접수 페이지로 연결됩니다.</span>
+                </p>
+              </div>
             </div>
           </Reveal>
+
         </div>
       </div>
     </section>

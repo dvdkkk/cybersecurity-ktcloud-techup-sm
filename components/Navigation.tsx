@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X, PhoneCall } from 'lucide-react';
+import { handlePhoneClick } from '../constants';
 
 export const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,7 +41,7 @@ export const Navigation: React.FC = () => {
     { name: '커리어지원', href: '#employment-support' },
     { name: '수강후기', href: '#reviews' },
     { name: '학습환경', href: '#learning-space' },
-    { name: '상담신청', href: '#consultation' },
+    { name: '상담신청', href: 'https://naver.me/5ajXDpLu', isExternal: true },
   ];
 
   return (
@@ -59,11 +60,16 @@ export const Navigation: React.FC = () => {
           {navLinks.map((link) => (
             <a 
               key={link.name} 
-              href={link.href} 
-              onClick={(e) => handleNavClick(e, link.href)}
+              href={link.href}
+              target={link.isExternal ? "_blank" : undefined}
+              rel={link.isExternal ? "noopener noreferrer" : undefined}
+              onClick={(e) => {
+                if (link.isExternal) return;
+                handleNavClick(e, link.href);
+              }}
               className={`text-lg font-medium transition-colors ${
                 link.name === '상담신청' 
-                  ? 'text-red-600 font-bold' 
+                  ? 'text-red-600 font-bold hover:text-red-500' 
                   : 'text-gray-300 hover:text-red-600'
               }`}
             >
@@ -72,10 +78,7 @@ export const Navigation: React.FC = () => {
           ))}
           <a 
             href="tel:18775280" 
-            onClick={(e) => {
-              const isPc = window.innerWidth >= 1024;
-              if (isPc) handleNavClick(e, '#consultation');
-            }}
+            onClick={handlePhoneClick}
             className="flex items-center gap-2 bg-red-700 text-white px-5 py-2 rounded-full font-bold text-lg hover:bg-red-600 transition-transform hover:scale-105"
           >
             <PhoneCall size={20} />
@@ -95,21 +98,31 @@ export const Navigation: React.FC = () => {
           {navLinks.map((link) => (
             <a 
               key={link.name} 
-              href={link.href} 
+              href={link.href}
+              target={link.isExternal ? "_blank" : undefined}
+              rel={link.isExternal ? "noopener noreferrer" : undefined}
               className={`text-base font-medium py-2 border-b border-zinc-800 ${
                 link.name === '상담신청' 
                   ? 'text-red-600 font-bold' 
                   : 'text-gray-300 hover:text-red-600'
               }`}
-              onClick={(e) => handleNavClick(e, link.href)}
+              onClick={(e) => {
+                if (link.isExternal) {
+                  setIsMobileMenuOpen(false);
+                  return;
+                }
+                handleNavClick(e, link.href);
+              }}
             >
               {link.name}
             </a>
           ))}
           <a 
-            href="#consultation" 
-            className="bg-red-700 text-white text-center py-3 rounded-md font-bold text-sm"
-            onClick={(e) => handleNavClick(e, '#consultation')}
+            href="https://naver.me/5ajXDpLu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-red-700 hover:bg-red-600 text-white text-center py-3 rounded-md font-bold text-sm transition-colors"
+            onClick={() => setIsMobileMenuOpen(false)}
           >
             무료상담 신청하기
           </a>
